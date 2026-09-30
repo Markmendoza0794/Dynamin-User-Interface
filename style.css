@@ -1,0 +1,122 @@
+/* Universal Styles */
+* {
+    margin: 0;
+    padding:0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #81bed8;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    padding: 20px;
+    margin: 0 auto 20px auto;
+    background-color: #02366a;
+    color: rgb(240, 237, 237);
+    text-align: center;
+}
+
+header > h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header > small {
+    font-size: 14px;
+    color: #bdc3c7;
+}
+
+/* Form Styles */
+#formContainer {
+    padding: 20px;
+    margin: 0 auto 20px auto;
+    border: 1px solid #fefefe;
+}
+
+#formContainer > #studentForm > .input-fields {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+
+#formContainer > #studentForm > .input-fields > label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#formContainer > #studentForm > .input-fields > input {
+    border: 1px solid #3d02ff;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#formContainer > #studentForm button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: 1px solid ;
+    background-color: #f00000;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Student List Styles */
+article {
+    background-color: white;
+}
+
+.list-item {
+    padding: 15px 20px;
+    margin: 0 auto 50px auto;
+    max-width: 600px;
+    background-color: rgb(3, 65, 251);
+    border: 1px solid #ccc;
+}
+
+.list-item > h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.list-item > p {
+    font-size: 14px;
+    color: #fcfcfc;
+    margin: 5px 0 10px 0;
+}
+
+.list-item > button {
+    padding: 5px 10px;
+    border: 1px solid #c0392b;
+    border-radius: 4px;
+    background-color: #ff230b;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+#studentList{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 50px;
+    
+}
+/* responsive design */
+@media (width <= 320px){
+        #studentList > .list-item{
+            grid-column: span 12;
+
+        }
+}
+    
+/* Tablet */ 
+@media (width > 320px) and (width <= 500px){
+#studentList > .list-item{
+    grid-column: span 2;
+}
+}
